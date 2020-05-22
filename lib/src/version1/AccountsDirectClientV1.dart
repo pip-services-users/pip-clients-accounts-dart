@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:pip_services3_commons/pip_services3_commons.dart';
 import 'package:pip_services3_rpc/pip_services3_rpc.dart';
-import './AccountV1.dart';
+import 'package:pip_services_accounts/pip_services_accounts.dart';
 import './IAccountsClientV1.dart';
 
 class AccountsDirectClientV1 extends DirectClient<dynamic>
@@ -49,7 +49,7 @@ class AccountsDirectClientV1 extends DirectClient<dynamic>
   Future<AccountV1> getAccountByLogin(
       String correlationId, String login) async {
     var timing = instrument(correlationId, 'accounts.get_account_by_login');
-    var account = await controller.getAccountById(correlationId, login);
+    var account = await controller.getAccountByLogin(correlationId, login);
     timing.endTiming();
     return account;
   }
@@ -64,7 +64,7 @@ class AccountsDirectClientV1 extends DirectClient<dynamic>
       String correlationId, String idOrLogin) async {
     var timing =
         instrument(correlationId, 'accounts.get_account_by_id_or_login');
-    var account = await controller.getAccountById(correlationId, idOrLogin);
+    var account = await controller.getAccountByIdOrLogin(correlationId, idOrLogin);
     timing.endTiming();
     return account;
   }

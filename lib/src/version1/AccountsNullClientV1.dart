@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:pip_services3_commons/pip_services3_commons.dart';
-import './AccountV1.dart';
+import 'package:pip_services_accounts/pip_services_accounts.dart';
 import './IAccountsClientV1.dart';
 
 class AccountsNullClientV1 implements IAccountsClientV1 {

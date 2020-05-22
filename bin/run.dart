@@ -1,3 +1,4 @@
+import 'package:pip_services_accounts/pip_services_accounts.dart';
 import 'package:pip_clients_accounts/pip_clients_accounts.dart';
 import 'package:pip_services3_commons/pip_services3_commons.dart';
 
